@@ -1,0 +1,196 @@
+#N canvas 427 106 610 205 10;
+#N canvas 1017 87 543 523 intrig 0;
+#X obj 100 100 cnv 15 150 100 empty empty empty 20 12 0 14 -188481
+-66577 0;
+#X obj 320 -21 inlet~;
+#X obj 346 457 outlet;
+#X obj 255 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 106 106 vsl 21 70 0 200 0 0 empty empty empty 0 -9 0 10 -209601
+-1 -1 0 1;
+#X obj 127 106 vsl 11 70 0 200 0 0 empty empty empty 0 -9 0 10 -209921
+-1 -1 6900 1;
+#X obj 319 14 fiddle~;
+#X floatatom 347 53 5 0 0 0 - - -;
+#X floatatom 393 53 5 0 0 0 - - -;
+#X floatatom 315 54 5 0 0 0 - - -;
+#X floatatom 273 55 5 0 0 0 - - -;
+#X obj 61 260 >;
+#X obj 61 284 route 1;
+#X obj 138 104 tgl 15 0 empty empty empty 17 7 0 10 -197889 -1 -1 0
+1;
+#X obj 61 308 spigot 1;
+#X obj 112 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -259082
+-1 -1;
+#X obj 143 -2 loadbang;
+#X msg 158 32 0;
+#X obj 157 106 vsl 21 70 0 200 0 0 empty empty empty 0 -9 0 10 -209601
+-1 -1 0 1;
+#X obj 178 106 vsl 11 70 0 200 0 0 empty empty empty 0 -9 0 10 -209921
+-1 -1 6900 1;
+#X obj 126 259 >;
+#X obj 126 283 route 1;
+#X obj 189 104 tgl 15 0 empty empty empty 17 7 0 10 -197889 -1 -1 0
+1;
+#X obj 126 307 spigot 1;
+#X obj 163 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -259082
+-1 -1;
+#X obj 322 200 delay;
+#X floatatom 211 134 3 15 500 1 - - -;
+#X obj 301 361 spigot;
+#X msg 346 302 1;
+#X msg 381 301 0;
+#X obj 352 336 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 290 276 delay 1;
+#X obj 328 421 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 209 157 bng 25 250 50 0 empty empty empty 17 7 0 10 -259082
+-1 -1;
+#X text 205 115 Valve;
+#X msg 199 42 50;
+#X msg 112 33 200;
+#X connect 1 0 6 0;
+#X connect 3 0 27 0;
+#X connect 3 0 31 0;
+#X connect 3 0 25 0;
+#X connect 4 0 11 0;
+#X connect 5 0 11 1;
+#X connect 6 0 10 0;
+#X connect 6 1 9 0;
+#X connect 6 2 7 0;
+#X connect 6 3 8 0;
+#X connect 7 0 4 0;
+#X connect 8 0 18 0;
+#X connect 11 0 12 0;
+#X connect 12 0 14 0;
+#X connect 13 0 14 1;
+#X connect 14 0 15 0;
+#X connect 15 0 3 0;
+#X connect 16 0 17 0;
+#X connect 16 0 35 0;
+#X connect 16 0 36 0;
+#X connect 17 0 13 0;
+#X connect 17 0 22 0;
+#X connect 18 0 20 0;
+#X connect 19 0 20 1;
+#X connect 20 0 21 0;
+#X connect 21 0 23 0;
+#X connect 22 0 23 1;
+#X connect 23 0 24 0;
+#X connect 24 0 3 0;
+#X connect 25 0 28 0;
+#X connect 26 0 25 1;
+#X connect 27 0 32 0;
+#X connect 28 0 30 0;
+#X connect 29 0 30 0;
+#X connect 30 0 27 1;
+#X connect 31 0 29 0;
+#X connect 32 0 2 0;
+#X connect 32 0 33 0;
+#X connect 35 0 26 0;
+#X connect 36 0 5 0;
+#X connect 36 0 19 0;
+#X coords 0 -1 1 1 150 100 1 100 100;
+#X restore 11 31 pd intrig;
+#X obj 12 7 adc~;
+#X obj 11 166 s metro;
+#N canvas 1017 87 543 523 intrig 0;
+#X obj 100 100 cnv 15 150 100 empty empty empty 20 12 0 14 -188481
+-66577 0;
+#X obj 320 -21 inlet~;
+#X obj 346 457 outlet;
+#X obj 255 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 106 106 vsl 21 70 0 200 0 0 empty empty empty 0 -9 0 10 -209601
+-1 -1 0 1;
+#X obj 127 106 vsl 11 70 0 200 0 0 empty empty empty 0 -9 0 10 -209921
+-1 -1 6900 1;
+#X obj 319 14 fiddle~;
+#X floatatom 347 53 5 0 0 0 - - -;
+#X floatatom 393 53 5 0 0 0 - - -;
+#X floatatom 315 54 5 0 0 0 - - -;
+#X floatatom 273 55 5 0 0 0 - - -;
+#X obj 61 260 >;
+#X obj 61 284 route 1;
+#X obj 138 104 tgl 15 0 empty empty empty 17 7 0 10 -197889 -1 -1 0
+1;
+#X obj 61 308 spigot 1;
+#X obj 112 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -259082
+-1 -1;
+#X obj 143 -2 loadbang;
+#X msg 158 32 0;
+#X obj 157 106 vsl 21 70 0 200 0 0 empty empty empty 0 -9 0 10 -209601
+-1 -1 0 1;
+#X obj 178 106 vsl 11 70 0 200 0 0 empty empty empty 0 -9 0 10 -209921
+-1 -1 6900 1;
+#X obj 126 259 >;
+#X obj 126 283 route 1;
+#X obj 189 104 tgl 15 0 empty empty empty 17 7 0 10 -197889 -1 -1 0
+1;
+#X obj 126 307 spigot 1;
+#X obj 163 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -259082
+-1 -1;
+#X obj 322 200 delay;
+#X floatatom 211 134 3 15 500 1 - - -;
+#X obj 301 361 spigot;
+#X msg 346 302 1;
+#X msg 381 301 0;
+#X obj 352 336 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 290 276 delay 1;
+#X obj 328 421 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 209 157 bng 25 250 50 0 empty empty empty 17 7 0 10 -259082
+-1 -1;
+#X text 205 115 Valve;
+#X msg 199 42 50;
+#X msg 112 33 200;
+#X connect 1 0 6 0;
+#X connect 3 0 27 0;
+#X connect 3 0 31 0;
+#X connect 3 0 25 0;
+#X connect 4 0 11 0;
+#X connect 5 0 11 1;
+#X connect 6 0 10 0;
+#X connect 6 1 9 0;
+#X connect 6 2 7 0;
+#X connect 6 3 8 0;
+#X connect 7 0 4 0;
+#X connect 8 0 18 0;
+#X connect 11 0 12 0;
+#X connect 12 0 14 0;
+#X connect 13 0 14 1;
+#X connect 14 0 15 0;
+#X connect 15 0 3 0;
+#X connect 16 0 17 0;
+#X connect 16 0 35 0;
+#X connect 16 0 36 0;
+#X connect 17 0 13 0;
+#X connect 17 0 22 0;
+#X connect 18 0 20 0;
+#X connect 19 0 20 1;
+#X connect 20 0 21 0;
+#X connect 21 0 23 0;
+#X connect 22 0 23 1;
+#X connect 23 0 24 0;
+#X connect 24 0 3 0;
+#X connect 25 0 28 0;
+#X connect 26 0 25 1;
+#X connect 27 0 32 0;
+#X connect 28 0 30 0;
+#X connect 29 0 30 0;
+#X connect 30 0 27 1;
+#X connect 31 0 29 0;
+#X connect 32 0 2 0;
+#X connect 32 0 33 0;
+#X connect 35 0 26 0;
+#X connect 36 0 5 0;
+#X connect 36 0 19 0;
+#X coords 0 -1 1 1 150 100 1 100 100;
+#X restore 209 23 pd intrig;
+#X obj 210 167 s metro;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 1 3 0;
+#X connect 3 0 4 0;

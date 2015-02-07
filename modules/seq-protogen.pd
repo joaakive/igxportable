@@ -1,0 +1,363 @@
+#N canvas 803 611 417 449 10;
+#N canvas 54 130 1443 880 sinesumfactor 0;
+#X obj 101 100 cnv 15 400 440 empty empty empty 20 12 0 14 -110853
+-66577 0;
+#X obj 105 121 cnv 15 390 160 empty empty empty 20 12 0 14 -174107
+-66577 0;
+#N canvas 1 83 450 300 (subpatch) 0;
+#X array sinesumX 131 float 3;
+#A 0 -0.16615 0 0.16615 0.327617 0.479867 0.618667 0.740216 0.841267
+0.919229 0.972248 0.999256 1 0.975041 0.925723 0.854121 0.762956 0.6555
+0.535453 0.406815 0.273747 0.140423 0.0108971 -0.111037 -0.221964 -0.318957
+-0.399661 -0.46236 -0.506017 -0.530291 -0.535524 -0.522707 -0.493427
+-0.449784 -0.394297 -0.329801 -0.259325 -0.185974 -0.112808 -0.0427271
+0.0216368 0.0780098 0.124554 0.159925 0.183306 0.194426 0.193548 0.18144
+0.159329 0.12883 0.0918705 0.050592 0.00725611 -0.0358596 -0.0765609
+-0.112832 -0.142922 -0.165415 -0.179289 -0.183954 -0.179272 -0.165557
+-0.143554 -0.114399 -0.0795652 -0.0407921 -2.22338e-06 0.0407877 0.0795612
+0.114395 0.143551 0.165555 0.179271 0.183954 0.17929 0.165417 0.142925
+0.112836 0.0765651 0.0358641 -0.0072514 -0.0505874 -0.0918662 -0.128827
+-0.159326 -0.181438 -0.193547 -0.194427 -0.183308 -0.159928 -0.124558
+-0.0780154 -0.0216434 0.0427198 0.112801 0.185966 0.259317 0.329794
+0.39429 0.449778 0.493423 0.522705 0.535523 0.530293 0.506021 0.462366
+0.399668 0.318966 0.221975 0.111049 -0.0108835 -0.140409 -0.273732
+-0.406801 -0.535439 -0.655487 -0.762945 -0.854112 -0.925717 -0.975037
+-0.999999 -0.999257 -0.972252 -0.919236 -0.841277 -0.740228 -0.618682
+-0.479883 -0.327634 -0.166168 -1.80486e-05 0.166133;
+#X coords 0 1 131 -1 150 60 1 0 0;
+#X restore 110 214 graph;
+#X floatatom -413 -22 5 0 0 0 - - -;
+#X floatatom -363 -23 5 0 0 0 - - -;
+#X floatatom -313 -27 5 0 0 0 - - -;
+#X obj -843 486 int;
+#X obj -811 484 + 1;
+#X obj -432 -64 shuffle;
+#X floatatom 110 139 3 0 0 1 + - -;
+#X floatatom 110 158 3 0 0 1 -- - -;
+#X obj -432 -84 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -381 -67 shuffle;
+#X floatatom 163 139 3 0 0 1 + - -;
+#X floatatom 163 158 3 0 0 1 -- - -;
+#X obj -382 -87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -324 -62 shuffle;
+#X floatatom 220 141 3 0 0 1 + - -;
+#X floatatom 220 160 3 0 0 1 -- - -;
+#X obj -326 -81 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -361 -138 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -795 409 0;
+#X floatatom -875 555 5 0 0 0 - - -;
+#X obj -560 751 == 0;
+#X obj -560 776 route 1;
+#X obj -160 -33 mod 5;
+#X obj -160 -10 == 0;
+#X obj -160 14 route 1;
+#X obj -362 24 pack f f f;
+#X obj -761 761 + 25;
+#X obj -761 734 mod 50;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array graphX 50 float 3;
+#A 0 -0.599257 -0.60248 -0.580825 -0.535946 -0.470354 -0.387315 -0.249839
+-0.176709 -0.0993291 -0.0215726 0.0527507 0.120048 0.177087 0.221122
+0.250003 0.262258 0.257146 0.234684 0.195644 0.141517 0.0744487 -0.00284872
+-0.448354 -0.477792 -0.504147 -0.526042 -0.54215 -0.55126 -0.552328
+-0.544525 -0.527283 -0.500319 -0.463657 -0.417639 -0.362914 -0.300424
+-0.231374 -0.157195 -0.0407921 -2.22338e-06 0.0407877 -1 -1 -1 -1 -1
+-1 -1 -1 -0.570444;
+#X coords 0 1 49 -1 200 70 1 0 0;
+#X restore 289 206 graph;
+#X floatatom 139 181 5 1 32 1 factorization_speed - -;
+#X msg -560 798 \; graphX const -1;
+#X obj -666 861 tabwrite graphX;
+#X msg -362 49 \; sinesumX sinesum 131 1 \$1 \$2 \$3;
+#X msg -503 55 \; sinesumX normalize 1;
+#X obj -802 828 tabread sinesumX;
+#X text 107 120 Factor 1;
+#X text 160 120 Factor 2;
+#X text 217 121 Factor 3;
+#X obj -463 -36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 116 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 105 286 cnv 15 390 160 empty empty empty 20 12 0 14 -174363
+-66577 0;
+#N canvas 1 83 450 300 (subpatch) 0;
+#X array sinesumY 131 float 3;
+#A 0 -0.182836 0 0.182836 0.3595 0.524038 0.670929 0.795275 0.892979
+0.960885 0.996886 1 0.970392 0.909367 0.819315 0.703621 0.566532 0.413001
+0.248507 0.0788467 -0.09007 -0.252438 -0.402763 -0.536058 -0.648017
+-0.735162 -0.794962 -0.825909 -0.82756 -0.800541 -0.746504 -0.668054
+-0.568635 -0.45239 -0.323997 -0.188481 -0.0510216 0.0832434 0.209415
+0.323015 0.420145 0.497634 0.55314 0.58523 0.593417 0.578165 0.540853
+0.483704 0.409681 0.32236 0.225772 0.124238 0.022185 -0.0760323 -0.16631
+-0.244958 -0.30885 -0.355543 -0.383371 -0.391508 -0.379993 -0.34972
+-0.302397 -0.240464 -0.166989 -0.0855355 -4.66072e-06 0.0855264 0.166981
+0.240456 0.302391 0.349716 0.37999 0.391508 0.383373 0.355547 0.308856
+0.244966 0.166319 0.0760426 -0.0221741 -0.124227 -0.225761 -0.32235
+-0.409672 -0.483696 -0.540848 -0.578162 -0.593416 -0.585232 -0.553145
+-0.497642 -0.420155 -0.323026 -0.209428 -0.0832575 0.0510068 0.188466
+0.323982 0.452377 0.568623 0.668044 0.746497 0.800536 0.827559 0.82591
+0.794967 0.73517 0.648028 0.536071 0.402778 0.252455 0.090088 -0.0788283
+-0.248489 -0.412984 -0.566516 -0.703607 -0.819304 -0.909358 -0.970387
+-0.999999 -0.996889 -0.96089 -0.892988 -0.795287 -0.670944 -0.524055
+-0.359518 -0.182856 -1.98797e-05 0.182817;
+#X coords 0 1 131 -1 150 60 1 0 0;
+#X restore 110 379 graph;
+#X floatatom -427 194 5 0 0 0 - - -;
+#X floatatom -377 193 5 0 0 0 - - -;
+#X floatatom -327 189 5 0 0 0 - - -;
+#X obj -446 152 shuffle;
+#X floatatom 110 304 3 0 0 1 + - -;
+#X floatatom 110 323 3 0 0 1 -- - -;
+#X obj -446 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -395 149 shuffle;
+#X floatatom 163 304 3 0 0 1 + - -;
+#X floatatom 163 323 3 0 0 1 -- - -;
+#X obj -396 129 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -338 154 shuffle;
+#X floatatom 220 306 3 0 0 1 + - -;
+#X floatatom 220 325 3 0 0 1 -- - -;
+#X obj -340 135 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -376 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -174 183 mod 5;
+#X obj -174 206 == 0;
+#X obj -174 228 route 1;
+#X obj -376 240 pack f f f;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array graphY 50 float 3;
+#A 0 -0.825909 -0.82756 -0.800541 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -0.903381;
+#X coords 0 1 49 -1 200 70 1 0 0;
+#X restore 289 371 graph;
+#X floatatom 139 346 5 1 32 1 factorization_speed - -;
+#X text 107 285 Factor 1;
+#X text 160 285 Factor 2;
+#X text 217 286 Factor 3;
+#X obj -470 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 116 347 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -517 271 \; sinesumY normalize 1;
+#X msg -375 265 \; sinesumY sinesum 131 1 \$1 \$2 \$3;
+#X obj -135 736 == 0;
+#X obj -135 761 route 1;
+#X obj -336 746 + 25;
+#X obj -336 719 mod 50;
+#X obj -376 813 tabread sinesumY;
+#X obj -240 847 tabwrite graphY;
+#X obj -441 1026 *;
+#X obj -879 343 inlet;
+#X obj -830 342 r metro;
+#X obj -865 416 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 232 476 10 0 0 1 overcome - -;
+#X msg -134 784 \; graphY const -1;
+#X text 223 101 3D Sinesum Vector Sequencer;
+#X obj 111 466 vradio 18 1 0 2 empty empty empty 0 -8 0 10 -103873
+-1 -1 1;
+#X text 131 465 1D;
+#X text 131 483 2D;
+#X text 110 445 Dimension;
+#X obj -577 1383 spigot 1;
+#X floatatom -532 1356 1 0 0 0 - - -;
+#X obj -380 1382 spigot 1;
+#X floatatom -335 1355 1 0 0 0 - - -;
+#X floatatom -375 1415 5 0 0 0 - - -;
+#X text -565 1362 1D;
+#X text -367 1364 2D;
+#X obj 157 1304 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 186 1307 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 113 1338 0;
+#X msg 183 1339 0;
+#X msg 140 1338 1;
+#X msg 209 1339 1;
+#X floatatom 536 598 5 0 0 0 - - -;
+#X floatatom -802 877 5 0 0 0 - - -;
+#X floatatom -376 869 5 0 0 0 - - -;
+#X floatatom 367 138 6 0 0 1 max - -;
+#X floatatom 367 157 6 0 0 1 base - -;
+#X obj -802 899 *;
+#X floatatom 367 176 6 0 0 1 overcome - -;
+#X floatatom 371 300 6 0 0 1 max - -;
+#X floatatom 371 319 6 0 0 1 base - -;
+#X floatatom 371 338 6 0 0 1 overcome - -;
+#X obj -802 920 +;
+#X obj -802 942 int;
+#X floatatom -778 1016 5 0 0 0 - - -;
+#X obj -376 891 *;
+#X obj -376 912 +;
+#X obj -376 934 int;
+#X floatatom -376 956 5 0 0 0 - - -;
+#X msg -279 1444 0;
+#N canvas 1 84 450 300 (subpatch) 0;
+#X array muisti5 1 float 3;
+#A 0 0;
+#X coords 0 1 1 128 100 60 1 0 0;
+#X restore 386 461 graph;
+#X floatatom 275 316 5 0 0 1 offset - -;
+#X floatatom 273 149 5 0 0 1 offset - -;
+#X obj -486 622 +;
+#X obj -782 661 +;
+#X obj 163 466 vradio 18 1 0 2 empty empty empty 0 -8 0 10 -103873
+-1 -1 1;
+#X obj -395 1076 +;
+#X obj -380 1176 spigot 1;
+#X obj -442 1175 spigot 1;
+#X floatatom -397 1150 1 0 0 0 - - -;
+#X floatatom -335 1150 1 0 0 0 - - -;
+#X floatatom 289 1032 5 0 0 0 - - -;
+#X floatatom 290 1076 5 0 0 0 - - -;
+#X obj 289 1053 != 1;
+#X text 183 464 SUM;
+#X text 183 482 MULTI;
+#X obj 161 1269 route 0 1;
+#X obj -383 1464 tabwrite muisti5;
+#X connect 3 0 28 0;
+#X connect 4 0 28 1;
+#X connect 4 0 41 0;
+#X connect 5 0 28 2;
+#X connect 5 0 41 0;
+#X connect 6 0 7 0;
+#X connect 6 0 22 0;
+#X connect 6 0 25 0;
+#X connect 6 0 61 0;
+#X connect 6 0 126 0;
+#X connect 6 0 125 0;
+#X connect 7 0 6 1;
+#X connect 8 0 3 0;
+#X connect 9 0 8 1;
+#X connect 10 0 8 2;
+#X connect 11 0 8 0;
+#X connect 12 0 4 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 2;
+#X connect 15 0 12 0;
+#X connect 16 0 5 0;
+#X connect 17 0 16 1;
+#X connect 18 0 16 2;
+#X connect 19 0 16 0;
+#X connect 20 0 11 0;
+#X connect 20 0 15 0;
+#X connect 20 0 19 0;
+#X connect 21 0 6 0;
+#X connect 23 0 24 0;
+#X connect 24 0 33 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 20 0;
+#X connect 28 0 35 0;
+#X connect 28 0 36 0;
+#X connect 29 0 37 0;
+#X connect 30 0 23 0;
+#X connect 30 0 29 0;
+#X connect 30 0 34 1;
+#X connect 32 0 25 1;
+#X connect 37 0 34 0;
+#X connect 37 0 105 0;
+#X connect 41 0 3 0;
+#X connect 42 0 20 0;
+#X connect 45 0 64 0;
+#X connect 46 0 64 1;
+#X connect 46 0 70 0;
+#X connect 47 0 64 2;
+#X connect 47 0 70 0;
+#X connect 48 0 45 0;
+#X connect 49 0 48 1;
+#X connect 50 0 48 2;
+#X connect 51 0 48 0;
+#X connect 52 0 46 0;
+#X connect 53 0 52 1;
+#X connect 54 0 52 2;
+#X connect 55 0 52 0;
+#X connect 56 0 47 0;
+#X connect 57 0 56 1;
+#X connect 58 0 56 2;
+#X connect 59 0 56 0;
+#X connect 60 0 51 0;
+#X connect 60 0 55 0;
+#X connect 60 0 59 0;
+#X connect 61 0 62 0;
+#X connect 62 0 63 0;
+#X connect 63 0 60 0;
+#X connect 64 0 73 0;
+#X connect 64 0 72 0;
+#X connect 66 0 61 1;
+#X connect 70 0 45 0;
+#X connect 71 0 60 0;
+#X connect 74 0 75 0;
+#X connect 75 0 85 0;
+#X connect 76 0 78 0;
+#X connect 77 0 74 0;
+#X connect 77 0 76 0;
+#X connect 77 0 79 1;
+#X connect 78 0 79 0;
+#X connect 78 0 106 0;
+#X connect 80 0 130 0;
+#X connect 81 0 83 0;
+#X connect 82 0 83 0;
+#X connect 83 0 6 0;
+#X connect 87 0 138 0;
+#X connect 91 0 95 0;
+#X connect 92 0 91 1;
+#X connect 93 0 95 0;
+#X connect 94 0 93 1;
+#X connect 95 0 104 0;
+#X connect 95 0 121 0;
+#X connect 95 0 139 0;
+#X connect 98 0 100 0;
+#X connect 98 0 102 0;
+#X connect 99 0 101 0;
+#X connect 99 0 103 0;
+#X connect 100 0 94 0;
+#X connect 101 0 92 0;
+#X connect 102 0 92 0;
+#X connect 103 0 94 0;
+#X connect 104 0 84 0;
+#X connect 105 0 109 0;
+#X connect 106 0 117 0;
+#X connect 107 0 109 1;
+#X connect 108 0 114 1;
+#X connect 109 0 114 0;
+#X connect 111 0 117 1;
+#X connect 112 0 118 1;
+#X connect 114 0 115 0;
+#X connect 115 0 116 0;
+#X connect 116 0 110 0;
+#X connect 116 0 91 0;
+#X connect 116 0 80 0;
+#X connect 116 0 128 0;
+#X connect 117 0 118 0;
+#X connect 118 0 119 0;
+#X connect 119 0 120 0;
+#X connect 120 0 113 0;
+#X connect 120 0 80 1;
+#X connect 120 0 128 1;
+#X connect 121 0 139 1;
+#X connect 123 0 125 1;
+#X connect 124 0 126 1;
+#X connect 125 0 77 0;
+#X connect 126 0 30 0;
+#X connect 127 0 133 0;
+#X connect 128 0 129 0;
+#X connect 129 0 93 0;
+#X connect 130 0 93 0;
+#X connect 131 0 130 1;
+#X connect 132 0 129 1;
+#X connect 133 0 135 0;
+#X connect 133 0 131 0;
+#X connect 134 0 132 0;
+#X connect 135 0 134 0;
+#X connect 138 0 98 0;
+#X connect 138 1 99 0;
+#X coords 0 -1 1 1 400 440 1 100 100;
+#X restore -311 -502 pd sinesumfactor;

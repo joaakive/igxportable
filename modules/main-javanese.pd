@@ -1,0 +1,529 @@
+#N canvas 247 273 250 407 10;
+#N canvas 151 129 1402 861 arabmain 0;
+#X obj 101 100 cnv 15 240 380 empty empty empty 20 12 0 14 -196673
+-66577 0;
+#X obj -565 -102 route 0 1 2;
+#X obj -651 108 arraycopy tuning;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array scaler 9 float 3;
+#A 0 0 1 2 3 4 5 6 21 16;
+#X coords 0 0 9 24 100 20 1 0 0;
+#X restore 113 117 graph;
+#N canvas 1 89 450 300 (subpatch) 0;
+#X array tuning 24 float 3;
+#A 0 1 1.1434 1.31267 1.51484 1.74311 1.60029 1.69154 1.22222 1.26316
+1.29412 1.33333 1.375 1.41667 1.45455 1.5 1.54545 1.58333 1.63636 1.68421
+1.72727 1.77778 1.83333 1.88889 1.94118;
+#X coords 0 2 24 1 100 20 1 0 0;
+#X restore 219 117 graph;
+#X msg -574 32 copy Gadwalji;
+#X msg -569 61 copy Adwar;
+#X msg -579 0 copy Gadwal;
+#X obj -456 138 s tuning_notes;
+#X msg -474 56 17;
+#X msg -467 20 24;
+#X obj -230 -70 loadbang;
+#X floatatom -41 -259 5 0 0 0 - - -;
+#X obj 33 -95 s scale_notes;
+#X obj 50 -179 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 77 -180 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 49 -149 7;
+#X msg 81 -148 12;
+#X floatatom 33 -115 5 0 0 0 - - -;
+#X obj 20 -177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 19 -147 5;
+#X msg 172 -157 22;
+#X msg 218 -160 24;
+#X obj 20 -206 route 0 1 2 3;
+#X obj 258 -199 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 268 -161 9;
+#X msg 126 -154 17;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Gadwal 24 float 3;
+#A 0 1 1.0293 1.05946 1.09051 1.12246 1.15535 1.18921 1.22405 1.25992
+1.29684 1.33484 1.37395 1.41421 1.45565 1.49831 1.54221 1.5874 1.63392
+1.68179 1.73107 1.7818 1.83401 1.88775 1.94306;
+#X coords 0 2 24 1 200 40 1;
+#X restore 772 -642 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Gadwalji 24 float 3;
+#A 0 1 1.03125 1.0625 1.09091 1.125 1.15789 1.1875 1.22222 1.26316
+1.29412 1.33333 1.375 1.41667 1.45455 1.5 1.54545 1.58333 1.63636 1.68421
+1.72727 1.77778 1.83333 1.88889 1.94118;
+#X coords 0 2 24 1 200 40 1 0 0;
+#X restore 563 -642 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Adwar 17 float 3;
+#A 0 1 1.0535 1.10986 1.125 1.18519 1.24859 1.26562 1.33333 1.40466
+1.47981 1.5 1.58025 1.66479 1.6875 1.77778 1.87289 1.97308;
+#X coords 0 2 17 1 200 40 1 0 0;
+#X restore 564 -576 graph;
+#X msg -202 -34 1;
+#X floatatom -456 113 5 0 0 0 - - -;
+#X obj 106 357 hradio 17 1 0 8 empty empty empty 0 -8 0 10 -255489
+-1 -1 7;
+#X floatatom 106 142 3 0 0 1 basetone - -;
+#X msg -230 -34 440;
+#X msg 499 -25 12;
+#X obj 212 144 bng 15 250 50 0 empty empty empty 17 7 0 10 -201921
+-1 -1;
+#X obj 257 757 s basetone;
+#X obj -206 499 tabread tuning;
+#X obj 24 196 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 243 444 5 0 0 0 - - -;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array octaves 9 float 1;
+#A 0 0.0625 0.125 0.25 0.5 1 2 4 8 17;
+#X coords 0 32 8 -1 100 32 1;
+#X restore 772 -572 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array dbtorms 123 float 1;
+#A 0 0 0 1.25893e-05 1.41254e-05 1.58489e-05 1.77828e-05 1.99526e-05
+2.23872e-05 2.51189e-05 2.81838e-05 3.16228e-05 3.54813e-05 3.98107e-05
+4.46684e-05 5.01187e-05 5.62341e-05 6.30957e-05 7.07946e-05 7.94328e-05
+8.91251e-05 0.0001 0.000112202 0.000125893 0.000141254 0.000158489
+0.000177828 0.000199526 0.000223872 0.000251189 0.000281838 0.000316228
+0.000354813 0.000398107 0.000446684 0.000501187 0.000562341 0.000630957
+0.000707946 0.000794328 0.000891251 0.001 0.00112202 0.00125893 0.00141254
+0.00158489 0.00177828 0.00199526 0.00223872 0.00251189 0.00281838 0.00316228
+0.00354813 0.00398107 0.00446684 0.00501187 0.00562341 0.00630957 0.00707946
+0.00794328 0.00891251 0.01 0.0112202 0.0125893 0.0141254 0.0158489
+0.0177828 0.0199526 0.0223872 0.0251189 0.0281838 0.0316228 0.0354813
+0.0398107 0.0446684 0.0501187 0.0562341 0.0630957 0.0707946 0.0794328
+0.0891251 0.1 0.112202 0.125893 0.141254 0.158489 0.177828 0.199526
+0.223872 0.251189 0.281838 0.316228 0.354813 0.398107 0.446684 0.501187
+0.562341 0.630957 0.707946 0.794328 0.891251 1 1.12202 1.25893 1.41254
+1.58489 1.77828 1.99526 2.23872 2.51189 2.81838 3.16228 3.54813 3.98107
+4.46684 5.01187 5.62341 6.30957 7.07946 7.94328 8.91251 10 11.2202
+12.5893;
+#X coords 0 10 123 0 200 100 1;
+#X restore 788 -505 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array vibrato 131 float 1;
+#A 0 0.970031 1 0.970031 0.881921 0.740952 0.555571 0.336891 0.0980184
+-0.146729 -0.382682 -0.595698 -0.773009 -0.88 -0.9 -0.92 -0.92 -0.85773
+-0.707109 -0.514106 -0.290288 -0.0490716 0.195086 0.427551 0.63439
+0.803205 0.86 0.88 0.88 0.88 0.84 0.82 0.471402 0.242986 6.63397e-06
+-0.242974 -0.471391 -0.671554 -0.831465 -0.941541 -0.995184 -0.989178
+-0.923883 -0.803213 -0.68 -0.42 -0.24 0.1 0.4 0.6 0.7071 0.857723 0.956937
+0.998795 0.980787 0.903994 0.773018 0.595708 0.382694 0.146742 -0.0980052
+-0.336878 -0.55556 -0.7 -0.8 -0.88 -0.88 -0.88 -0.84 -0.82 -0.555582
+-0.336903 -0.0980316 0.146716 0.38267 0.595687 0.773001 0.903983 0.980782
+0.998796 0.956945 0.857737 0.707119 0.514117 0.290301 0.0490849 -0.195073
+-0.427539 -0.63438 -0.803197 -0.923873 -0.989174 -0.995187 -0.94155
+-0.83148 -0.671573 -0.471414 -0.242999 -1.99019e-05 0.242961 0.471379
+0.671544 0.831458 0.88 0.9 0.9 0.88 0.803221 0.63441 0.08 -0.14 -0.28
+-0.48 -0.64 -0.72 -0.857717 -0.956933 -0.998794 -0.98079 -0.904 -0.773026
+-0.595719 -0.382706 -0.146755 0.097992 0.336866 0.555549 0.740934 0.881909
+0.970025 1 0.970038;
+#X coords 0 1 130 -1 200 100 1 0 0;
+#X restore 572 -510 graph;
+#X obj -206 86 r metro;
+#X obj -206 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 123 376 vradio 17 1 0 5 empty empty empty 0 -8 0 10 -201281
+-1 -1 2;
+#X obj 106 376 vradio 17 1 0 5 empty empty empty 0 -8 0 10 -214145
+-1 -1 2;
+#X obj 157 376 vradio 17 1 0 5 empty empty empty 0 -8 0 10 -201281
+-1 -1 2;
+#X obj 140 376 vradio 17 1 0 5 empty empty empty 0 -8 0 10 -214145
+-1 -1 2;
+#X obj 191 376 vradio 17 1 0 5 empty empty empty 0 -8 0 10 -201281
+-1 -1 2;
+#X obj 174 376 vradio 17 1 0 5 empty empty empty 0 -8 0 10 -214145
+-1 -1 2;
+#X obj 225 376 vradio 17 1 0 5 empty empty empty 0 -8 0 10 -201281
+-1 -1 2;
+#X obj 208 376 vradio 17 1 0 5 empty empty empty 0 -8 0 10 -214145
+-1 -1 2;
+#X floatatom -206 308 5 0 0 0 - - -;
+#X obj -206 152 int;
+#X obj -180 152 + 1;
+#X obj -206 286 mod 8;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array modmatrix 8 float 3;
+#A 0 2 2 2 2 2 2 2 2;
+#X coords 0 15 8 0 200 140 1 0 0;
+#X restore 531 659 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array keymatrix 8 float 3;
+#A 0 5 0 0 0 1 1 1 0;
+#X coords 0 15 8 0 200 140 1 0 0;
+#X restore 1048 893 graph;
+#X obj -206 374 tabread modmatrix;
+#X floatatom -206 416 5 0 0 0 - - -;
+#X obj -206 395 - 2;
+#X floatatom -158 423 5 0 0 0 - - -;
+#X floatatom 243 409 5 0 7 0 - - -;
+#X obj -206 439 +;
+#X floatatom -206 460 5 0 0 0 - - -;
+#X obj -206 523 *;
+#X obj -206 177 mod;
+#X floatatom 230 143 5 8 64 1 step_length - -;
+#X obj -206 199 == 0;
+#X obj -206 261 int;
+#X obj -180 261 + 1;
+#X obj -206 220 route 1;
+#X obj -206 242 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 244 358 tgl 15 0 empty empty on 17 7 0 10 -201921 -1 -1 1 1
+;
+#X msg -172 -37 16;
+#X obj 278 445 bng 15 250 50 0 empty empty 440 17 7 0 10 -262144 -1
+-1;
+#X text 244 424 Result;
+#X msg 301 676 440;
+#X obj -206 352 spigot;
+#X msg -135 -38 0;
+#X obj 107 208 bng 15 250 50 0 empty empty Kanjutmesem 17 7 0 10 -229953
+-1 -1;
+#X obj 107 225 bng 15 250 50 0 empty empty Manisrenga 17 7 0 10 -229953
+-1 -1;
+#X obj 107 242 bng 15 250 50 0 empty empty Udanriris 17 7 0 10 -229953
+-1 -1;
+#X obj 107 259 bng 15 250 50 0 empty empty Pengawesari 17 7 0 10 -229953
+-1 -1;
+#X obj 963 574 arraycopy scaler;
+#X msg 964 472 copy Same;
+#X obj 107 276 bng 15 250 50 0 empty empty Rarasrum 17 7 0 10 -229953
+-1 -1;
+#X obj 107 293 bng 15 250 50 0 empty empty Hardjanagara 17 7 0 10 -229953
+-1 -1;
+#X obj 107 310 bng 15 250 50 0 empty empty Madukentir 17 7 0 10 -229953
+-1 -1;
+#X obj 107 327 bng 15 250 50 0 empty empty Surak 17 7 0 10 -229953
+-1 -1;
+#X obj 847 -37 bng 15 250 50 0 empty empty Tabanan 17 7 0 10 -229953
+-1 -1;
+#X obj 847 -20 bng 15 250 50 0 empty empty Batuan 17 7 0 10 -229953
+-1 -1;
+#X msg 808 527 copy Tabanan7;
+#X msg 808 506 copy Batuan7;
+#X msg 963 500 copy Same7;
+#X obj 808 576 arraycopy tuning;
+#X obj 1047 547 s tuning_notes;
+#X obj 963 547 s scale_notes;
+#X msg 963 523 5;
+#X msg 1047 523 7;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Same 5 float 3;
+#A 0 0 1 2 3 4;
+#X coords 0 5 5 0 100 40 1 0 0;
+#X restore 391 -660 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Same7 7 float 3;
+#A 0 0 1 2 3 4 5 6;
+#X coords 0 7 7 0 100 40 1 0 0;
+#X restore 391 -605 graph;
+#X obj -206 479 mod 7;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Manisrenga 5 float 3;
+#A 0 1 1.13518 1.32409 1.5096 1.72758;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore -23 -596 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Kanjutmesem 5 float 3;
+#A 0 1 1.13813 1.3176 1.51135 1.72858;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore -135 -593 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Udanriris 5 float 3;
+#A 0 1 1.15903 1.34412 1.52935 1.7522;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore 90 -598 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Pengawesari 5 float 3;
+#A 0 1 1.15635 1.32332 1.5144 1.73558;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore 200 -596 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Rarasrum 5 float 3;
+#A 0 1 1.14175 1.30209 1.50699 1.72309;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore -138 -527 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Hardjanagara 5 float 3;
+#A 0 1 1.13288 1.3085 1.48238 1.72459;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore -22 -527 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Madukentir 5 float 3;
+#A 0 1 1.16777 1.34296 1.54533 1.7649;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore 90 -527 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Surak 5 float 3;
+#A 0 1 1.12636 1.28751 1.47768 1.7221;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore 203 -529 graph;
+#X msg 808 301 copy Kanjutmesem;
+#X msg 808 321 copy Manisrenga;
+#X msg 808 341 copy Udanriris;
+#X msg 808 362 copy Pengawesari;
+#X msg 808 382 copy Rarasrum;
+#X msg 808 403 copy Hardjanagara;
+#X msg 809 423 copy Madukentir;
+#X msg 808 444 copy Surak;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array One 5 float 3;
+#A 0 1 1.14671 1.32562 1.52979 1.7593;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore -118 -463 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Two 5 float 3;
+#A 0 1 1.15669 1.32792 1.52714 1.75068;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore -14 -463 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Three 5 float 3;
+#A 0 1 1.14671 1.31608 1.50525 1.75119;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore 90 -463 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Four 5 float 3;
+#A 0 1 1.13945 1.31798 1.53156 1.75321;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore 194 -463 graph;
+#N canvas 1 83 450 300 (subpatch) 0;
+#X array Five 5 float 3;
+#A 0 1 1.1434 1.31267 1.51484 1.74311;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore -119 -407 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Six 5 float 3;
+#A 0 1 1.13419 1.30172 1.49917 1.72658;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore -15 -407 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Seven 5 float 3;
+#A 0 1 1.14737 1.31039 1.5201 1.74917;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore 88 -407 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Eight 5 float 3;
+#A 0 1 1.1434 1.30888 1.51135 1.74715;
+#X coords 0 2 5 1 100 40 1 0 0;
+#X restore 192 -407 graph;
+#X obj 219 208 bng 15 250 50 0 empty empty 1 17 7 0 10 -229953 -1 -1
+;
+#X obj 219 225 bng 15 250 50 0 empty empty 2 17 7 0 10 -229953 -1 -1
+;
+#X obj 219 242 bng 15 250 50 0 empty empty 3 17 7 0 10 -229953 -1 -1
+;
+#X obj 219 259 bng 15 250 50 0 empty empty 4 17 7 0 10 -229953 -1 -1
+;
+#X obj 219 276 bng 15 250 50 0 empty empty 5 17 7 0 10 -229953 -1 -1
+;
+#X obj 219 293 bng 15 250 50 0 empty empty 6 17 7 0 10 -229953 -1 -1
+;
+#X obj 219 310 bng 15 250 50 0 empty empty 7 17 7 0 10 -229953 -1 -1
+;
+#X obj 219 327 bng 15 250 50 0 empty empty 8 17 7 0 10 -229953 -1 -1
+;
+#X msg 645 174 copy One;
+#X msg 645 194 copy Two;
+#X msg 645 214 copy Three;
+#X msg 645 235 copy Four;
+#X msg 645 255 copy Five;
+#X msg 645 276 copy Six;
+#X msg 646 296 copy Seven;
+#X msg 645 317 copy Eight;
+#X text 105 190 Kunst;
+#X text 158 165 Slendro Scales;
+#X text 219 190 Gadja Mada;
+#X obj 647 527 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -58 705 tabwrite modmatrix;
+#X floatatom -58 689 5 0 0 0 - - -;
+#X msg 55 705 0;
+#X obj -58 737 tabwrite modmatrix;
+#X floatatom -58 721 5 0 0 0 - - -;
+#X msg 55 737 1;
+#X obj -57 769 tabwrite modmatrix;
+#X floatatom -57 753 5 0 0 0 - - -;
+#X msg 56 769 2;
+#X obj -55 806 tabwrite modmatrix;
+#X floatatom -55 790 5 0 0 0 - - -;
+#X msg 58 806 3;
+#X obj 81 708 tabwrite modmatrix;
+#X floatatom 81 692 5 0 0 0 - - -;
+#X obj 81 740 tabwrite modmatrix;
+#X floatatom 81 724 5 0 0 0 - - -;
+#X obj 82 772 tabwrite modmatrix;
+#X floatatom 82 756 5 0 0 0 - - -;
+#X obj 84 809 tabwrite modmatrix;
+#X floatatom 84 793 5 0 0 0 - - -;
+#X msg 194 708 4;
+#X msg 194 740 5;
+#X msg 195 772 6;
+#X msg 197 809 7;
+#X connect 1 0 6 0;
+#X connect 1 1 5 0;
+#X connect 1 2 7 0;
+#X connect 5 0 2 0;
+#X connect 5 0 10 0;
+#X connect 6 0 2 0;
+#X connect 6 0 9 0;
+#X connect 7 0 2 0;
+#X connect 7 0 10 0;
+#X connect 9 0 31 0;
+#X connect 10 0 31 0;
+#X connect 11 0 30 0;
+#X connect 11 0 34 0;
+#X connect 11 0 35 0;
+#X connect 11 0 76 0;
+#X connect 11 0 81 0;
+#X connect 12 0 23 0;
+#X connect 14 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 18 0;
+#X connect 17 0 18 0;
+#X connect 18 0 13 0;
+#X connect 19 0 20 0;
+#X connect 20 0 18 0;
+#X connect 21 0 18 0;
+#X connect 22 0 18 0;
+#X connect 23 0 19 0;
+#X connect 23 1 14 0;
+#X connect 23 2 15 0;
+#X connect 23 3 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 18 0;
+#X connect 26 0 18 0;
+#X connect 31 0 8 0;
+#X connect 32 0 39 0;
+#X connect 33 0 67 1;
+#X connect 34 0 33 0;
+#X connect 35 0 32 0;
+#X connect 36 0 35 0;
+#X connect 38 0 67 0;
+#X connect 39 0 33 0;
+#X connect 40 0 37 0;
+#X connect 44 0 45 0;
+#X connect 45 0 55 0;
+#X connect 46 0 153 0;
+#X connect 47 0 150 0;
+#X connect 48 0 159 0;
+#X connect 49 0 156 0;
+#X connect 50 0 164 0;
+#X connect 51 0 162 0;
+#X connect 52 0 168 0;
+#X connect 53 0 166 0;
+#X connect 54 0 32 0;
+#X connect 54 0 80 0;
+#X connect 55 0 56 0;
+#X connect 55 0 68 0;
+#X connect 56 0 55 1;
+#X connect 57 0 54 0;
+#X connect 60 0 62 0;
+#X connect 61 0 65 0;
+#X connect 62 0 61 0;
+#X connect 63 0 65 1;
+#X connect 64 0 63 0;
+#X connect 65 0 66 0;
+#X connect 66 0 104 0;
+#X connect 67 0 40 0;
+#X connect 68 0 70 0;
+#X connect 69 0 68 1;
+#X connect 70 0 73 0;
+#X connect 71 0 72 0;
+#X connect 71 0 57 0;
+#X connect 72 0 71 1;
+#X connect 73 0 74 0;
+#X connect 74 0 71 0;
+#X connect 75 0 80 1;
+#X connect 76 0 69 0;
+#X connect 77 0 79 0;
+#X connect 79 0 40 0;
+#X connect 80 0 60 0;
+#X connect 81 0 75 0;
+#X connect 82 0 113 0;
+#X connect 83 0 114 0;
+#X connect 84 0 115 0;
+#X connect 85 0 116 0;
+#X connect 87 0 86 0;
+#X connect 87 0 100 0;
+#X connect 88 0 117 0;
+#X connect 89 0 118 0;
+#X connect 90 0 120 0;
+#X connect 91 0 119 0;
+#X connect 92 0 94 0;
+#X connect 93 0 95 0;
+#X connect 94 0 97 0;
+#X connect 95 0 97 0;
+#X connect 96 0 86 0;
+#X connect 96 0 101 0;
+#X connect 100 0 99 0;
+#X connect 100 0 98 0;
+#X connect 101 0 99 0;
+#X connect 101 0 98 0;
+#X connect 104 0 38 0;
+#X connect 113 0 87 0;
+#X connect 113 0 97 0;
+#X connect 114 0 87 0;
+#X connect 114 0 97 0;
+#X connect 115 0 87 0;
+#X connect 115 0 97 0;
+#X connect 116 0 87 0;
+#X connect 116 0 97 0;
+#X connect 117 0 97 0;
+#X connect 118 0 97 0;
+#X connect 119 0 97 0;
+#X connect 120 0 97 0;
+#X connect 129 0 137 0;
+#X connect 130 0 138 0;
+#X connect 131 0 139 0;
+#X connect 132 0 140 0;
+#X connect 133 0 141 0;
+#X connect 134 0 142 0;
+#X connect 135 0 143 0;
+#X connect 136 0 144 0;
+#X connect 137 0 97 0;
+#X connect 137 0 148 0;
+#X connect 138 0 97 0;
+#X connect 138 0 148 0;
+#X connect 139 0 97 0;
+#X connect 139 0 148 0;
+#X connect 140 0 97 0;
+#X connect 140 0 148 0;
+#X connect 141 0 97 0;
+#X connect 141 0 148 0;
+#X connect 142 0 97 0;
+#X connect 142 0 148 0;
+#X connect 143 0 97 0;
+#X connect 143 0 148 0;
+#X connect 144 0 97 0;
+#X connect 144 0 148 0;
+#X connect 148 0 87 0;
+#X connect 150 0 149 0;
+#X connect 150 0 151 0;
+#X connect 151 0 149 1;
+#X connect 153 0 152 0;
+#X connect 153 0 154 0;
+#X connect 154 0 152 1;
+#X connect 156 0 155 0;
+#X connect 156 0 157 0;
+#X connect 157 0 155 1;
+#X connect 159 0 158 0;
+#X connect 159 0 160 0;
+#X connect 160 0 158 1;
+#X connect 162 0 161 0;
+#X connect 162 0 169 0;
+#X connect 164 0 163 0;
+#X connect 164 0 170 0;
+#X connect 166 0 165 0;
+#X connect 166 0 171 0;
+#X connect 168 0 167 0;
+#X connect 168 0 172 0;
+#X connect 169 0 161 1;
+#X connect 170 0 163 1;
+#X connect 171 0 165 1;
+#X connect 172 0 167 1;
+#X coords 0 -1 1 1 240 380 1 100 100;
+#X restore -410 -671 pd arabmain;

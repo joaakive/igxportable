@@ -1,0 +1,228 @@
+#N canvas 1 111 214 272 10;
+#N canvas 0 83 1680 967 cubecontrol 0;
+#X obj 101 100 cnv 15 200 200 empty empty empty 20 12 0 14 -259713
+-66577 0;
+#X obj 105 119 bng 21 250 50 0 empty empty change1 23 9 0 10 -174801
+-1 -1;
+#X obj 105 142 bng 21 250 50 0 empty empty change2 23 9 0 10 -174801
+-1 -1;
+#X obj 105 165 bng 21 250 50 0 empty empty change3 23 9 0 10 -174801
+-1 -1;
+#X obj 105 188 bng 21 250 50 0 empty empty change4 23 9 0 10 -174801
+-1 -1;
+#X obj 105 211 bng 21 250 50 0 empty empty change5 23 9 0 10 -174801
+-1 -1;
+#X text 125 100 Cube Control;
+#X obj 260 -114 s change_cube1;
+#X obj 259 -88 s change_cube2;
+#X obj 258 -63 s change_cube3;
+#X obj 258 -41 s change_cube4;
+#X obj 256 -17 s change_cube5;
+#X floatatom 614 25 5 0 0 0 - - -;
+#X obj 613 -3 int;
+#X obj 577 -74 r metro;
+#X obj 578 -44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 664 -71 r stop;
+#X msg 658 -39 0;
+#X obj 643 -3 + 1;
+#X obj 507 187 mod;
+#X floatatom 527 116 5 0 0 0 - - -;
+#X obj 506 210 == 0;
+#X obj 505 290 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 0 532 5 0 0 1 all_change_freq - -;
+#X obj 477 503 s change_mod;
+#X obj 103 281 tgl 15 0 empty empty continous_change 17 7 0 10 -262144
+-1 -1 0 1;
+#X msg -61 -19 4096;
+#X msg -66 -81 1024;
+#X msg -63 -51 2048;
+#X obj -1 514 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 16 514 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 33 514 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 78 14 loadbang;
+#X msg 63 72 0;
+#X obj -30 278 s total;
+#X floatatom 103 261 5 1 48 1 uni_length - -;
+#X obj 201 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 220 263 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -109 136 16;
+#X msg -65 128 32;
+#X obj 503 262 spigot;
+#X obj 1135 327 int;
+#X obj 1173 331 + 1;
+#X obj 1157 300 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 1142 360 5 0 0 0 - - -;
+#X obj 1145 392 mod;
+#X floatatom 1196 366 5 0 0 0 - - -;
+#X floatatom 1146 415 5 0 0 0 - - -;
+#X obj 1152 175 int;
+#X obj 1190 179 + 1;
+#X obj 1158 205 mod;
+#X floatatom 1246 185 5 0 0 0 - - -;
+#X obj 1159 267 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1148 115 unpack;
+#X obj 1158 226 == 0;
+#X obj 1163 246 route 1;
+#X obj 1154 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 386 518 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 180 122 5 0 0 0 - - -;
+#X floatatom 180 144 5 0 0 0 - - -;
+#X floatatom 179 167 5 0 0 0 - - -;
+#X floatatom 179 189 5 0 0 0 - - -;
+#X floatatom 178 211 5 0 0 0 - - -;
+#X obj 572 188 mod;
+#X floatatom 584 169 5 0 0 0 - - -;
+#X obj 570 207 == 0;
+#X obj 568 230 route 1;
+#X obj 569 287 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 567 259 spigot;
+#X obj 640 189 mod;
+#X floatatom 652 170 5 0 0 0 - - -;
+#X obj 638 208 == 0;
+#X obj 636 231 route 1;
+#X obj 637 288 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 635 260 spigot;
+#X obj 704 186 mod;
+#X floatatom 716 167 5 0 0 0 - - -;
+#X obj 702 205 == 0;
+#X obj 700 228 route 1;
+#X obj 701 285 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 699 257 spigot;
+#X obj 770 191 mod;
+#X floatatom 782 172 5 0 0 0 - - -;
+#X obj 768 210 == 0;
+#X obj 766 233 route 1;
+#X obj 767 290 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 765 262 spigot;
+#X msg 338 45 32;
+#X obj 503 233 route 1;
+#X floatatom 146 239 5 0 0 1 mod_change-rate - -;
+#X obj 889 208 mod;
+#X floatatom 901 189 5 0 0 0 - - -;
+#X obj 887 227 == 0;
+#X obj 885 250 route 1;
+#X obj 886 307 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 884 279 spigot;
+#X obj 709 543 s mode_change;
+#X obj 128 240 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 1 0 7 0;
+#X connect 2 0 8 0;
+#X connect 3 0 9 0;
+#X connect 4 0 10 0;
+#X connect 5 0 11 0;
+#X connect 12 0 19 0;
+#X connect 12 0 63 0;
+#X connect 12 0 69 0;
+#X connect 12 0 75 0;
+#X connect 12 0 81 0;
+#X connect 12 0 90 0;
+#X connect 13 0 18 0;
+#X connect 13 0 12 0;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X connect 16 0 17 0;
+#X connect 17 0 13 0;
+#X connect 18 0 13 1;
+#X connect 19 0 21 0;
+#X connect 20 0 19 1;
+#X connect 21 0 88 0;
+#X connect 22 0 1 0;
+#X connect 25 0 40 1;
+#X connect 25 0 68 1;
+#X connect 25 0 74 1;
+#X connect 25 0 80 1;
+#X connect 25 0 86 1;
+#X connect 26 0 23 0;
+#X connect 27 0 23 0;
+#X connect 28 0 23 0;
+#X connect 29 0 27 0;
+#X connect 30 0 28 0;
+#X connect 31 0 26 0;
+#X connect 32 0 33 0;
+#X connect 33 0 25 0;
+#X connect 33 0 97 0;
+#X connect 35 0 34 0;
+#X connect 36 0 39 0;
+#X connect 37 0 38 0;
+#X connect 38 0 35 0;
+#X connect 39 0 35 0;
+#X connect 40 0 22 0;
+#X connect 41 0 42 0;
+#X connect 41 0 44 0;
+#X connect 42 0 41 1;
+#X connect 43 0 41 0;
+#X connect 44 0 45 0;
+#X connect 45 0 47 0;
+#X connect 46 0 45 1;
+#X connect 48 0 49 0;
+#X connect 48 0 50 0;
+#X connect 49 0 48 1;
+#X connect 50 0 54 0;
+#X connect 51 0 50 1;
+#X connect 52 0 43 0;
+#X connect 53 0 56 0;
+#X connect 54 0 55 0;
+#X connect 55 0 52 0;
+#X connect 56 0 48 0;
+#X connect 58 0 20 0;
+#X connect 59 0 64 0;
+#X connect 60 0 70 0;
+#X connect 61 0 76 0;
+#X connect 62 0 82 0;
+#X connect 63 0 65 0;
+#X connect 64 0 63 1;
+#X connect 65 0 66 0;
+#X connect 66 0 68 0;
+#X connect 67 0 2 0;
+#X connect 68 0 67 0;
+#X connect 69 0 71 0;
+#X connect 70 0 69 1;
+#X connect 71 0 72 0;
+#X connect 72 0 74 0;
+#X connect 73 0 3 0;
+#X connect 74 0 73 0;
+#X connect 75 0 77 0;
+#X connect 76 0 75 1;
+#X connect 77 0 78 0;
+#X connect 78 0 80 0;
+#X connect 79 0 4 0;
+#X connect 80 0 79 0;
+#X connect 81 0 83 0;
+#X connect 82 0 81 1;
+#X connect 83 0 84 0;
+#X connect 84 0 86 0;
+#X connect 85 0 5 0;
+#X connect 86 0 85 0;
+#X connect 87 0 58 0;
+#X connect 87 0 59 0;
+#X connect 87 0 60 0;
+#X connect 87 0 61 0;
+#X connect 87 0 62 0;
+#X connect 88 0 40 0;
+#X connect 89 0 91 0;
+#X connect 90 0 92 0;
+#X connect 91 0 90 1;
+#X connect 92 0 93 0;
+#X connect 93 0 95 0;
+#X connect 94 0 96 0;
+#X connect 95 0 94 0;
+#X connect 97 0 95 1;
+#X coords 0 -1 1 1 200 200 1 100 100;
+#X restore -95 -38 pd cubecontrol;

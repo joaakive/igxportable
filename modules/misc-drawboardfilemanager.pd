@@ -1,0 +1,11 @@
+#N canvas 233 268 450 458 10;
+#X text 110 18 Drawboard Saving;
+#X msg 136 227 write testi1-2.pt piirto2;
+#X msg 124 192 write testi1-1.pt piirto;
+#X obj 62 371 textfile;
+#X msg 183 337 read testi1-2.pt piirto2;
+#X msg 159 295 read testi1-1.pt;
+#X connect 1 0 3 0;
+#X connect 2 0 3 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;

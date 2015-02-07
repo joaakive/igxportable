@@ -1,0 +1,309 @@
+#N canvas 741 173 605 608 10;
+#N canvas 0 83 1680 967 igemain 0;
+#X obj 100 100 cnv 15 600 600 empty empty empty 20 12 0 14 -165889
+-66577 0;
+#X msg -425 -49 \; pd open main-china.pd /home/joel/PD2/modules/;
+#X msg -423 -158 \; pd open main-arabic.pd /home/joel/PD2/modules/
+;
+#X msg -424 -10 \; pd open main-seast.pd /home/joel/PD2/modules/;
+#X msg -428 63 \; pd open main-balinese.pd /home/joel/PD2/modules/
+;
+#X msg -425 26 \; pd open main-javanese.pd /home/joel/PD2/modules/
+;
+#X text 109 310 Tonal / Tuning Mains;
+#X obj 115 389 bng 17 250 50 0 empty empty chinese 17 7 0 10 -258049
+-1 -1;
+#X obj 115 370 bng 17 250 50 0 empty empty indian 17 7 0 10 -160466
+-1 -1;
+#X obj 115 332 bng 17 250 50 0 empty empty arabic 17 7 0 10 -2562 -1
+-1;
+#X obj 115 408 bng 17 250 50 0 empty empty southeast-asian 17 7 0 10
+-241680 -1 -1;
+#X msg -423 -121 \; pd open main-african.pd /home/joel/PD2/modules/
+;
+#X obj 115 446 bng 17 250 50 0 empty empty balinese 17 7 0 10 -214145
+-1 -1;
+#X msg -424 -86 \; pd open main-indian.pd /home/joel/PD2/modules/;
+#X obj 115 427 bng 17 250 50 0 empty empty javanese 17 7 0 10 -196673
+-1 -1;
+#X obj 115 351 bng 17 250 50 0 empty empty african 17 7 0 10 -141829
+-1 -1;
+#X text 106 468 Sequence Seed Generators;
+#X obj 116 486 bng 17 250 50 0 empty empty AlgoMatrix 17 7 0 10 -255298
+-1 -1;
+#X obj 116 506 bng 17 250 50 0 empty empty FractalMatrix 17 7 0 10
+-254786 -1 -1;
+#X obj 116 545 bng 17 250 50 0 empty empty CellWorkMatrix 17 7 0 10
+-213826 -1 -1;
+#X text 277 427 Seed Distros;
+#X obj 284 466 bng 17 250 50 0 empty empty BrushDistro 17 7 0 10 -164418
+-1 -1;
+#X obj 284 486 bng 17 250 50 0 empty empty BrushDistroCyclic 17 7 0
+10 -164674 -1 -1;
+#X obj 283 587 bng 17 250 50 0 empty empty PatternDistro 17 7 0 10
+-197442 -1 -1;
+#X obj 283 606 bng 17 250 50 0 empty empty SkyDistro 17 7 0 10 -213826
+-1 -1;
+#X text 283 306 Metronomes;
+#X text 572 306 Drummers;
+#X text 429 544 Sound Generators;
+#X text 572 541 MIDI-Instruments;
+#X obj 289 326 bng 17 250 50 0 empty empty dynmetro 17 7 0 10 -256321
+-1 -1;
+#X obj 289 345 bng 17 250 50 0 empty empty dangdut 17 7 0 10 -260097
+-1 -1;
+#X obj 289 364 bng 17 250 50 0 empty empty dangdut2 17 7 0 10 -260097
+-1 -1;
+#X obj 289 383 bng 17 250 50 0 empty empty DarkwatersLooper 17 7 0
+10 -201345 -1 -1;
+#X obj 116 525 bng 17 250 50 0 empty empty AlgoGenerators 17 7 0 10
+-214402 -1 -1;
+#X obj 283 548 bng 17 250 50 0 empty empty PlugPlayers 17 7 0 10 -213826
+-1 -1;
+#X obj 283 568 bng 17 250 50 0 empty empty CubeDistro 17 7 0 10 -213826
+-1 -1;
+#X text 277 528 Autonomous Distros;
+#X text 424 306 Single Sequencers;
+#X obj 434 325 bng 17 250 50 0 empty empty Fugue 17 7 0 10 -260097
+-1 -1;
+#X obj 434 344 bng 17 250 50 0 empty empty MetalSynth 17 7 0 10 -259585
+-1 -1;
+#X obj 434 363 bng 17 250 50 0 empty empty BurmaBurst 17 7 0 10 -260097
+-1 -1;
+#X obj 284 447 bng 17 250 50 0 empty empty PlainDistro 17 7 0 10 -128706
+-1 -1;
+#X obj 284 506 bng 17 250 50 0 empty empty SoloBrushDistro 17 7 0 10
+-209602 -1 -1;
+#X obj 289 402 bng 17 250 50 0 empty empty Valve 17 7 0 10 -202113
+-1 -1;
+#X obj 434 382 bng 17 250 50 0 empty empty BassTiger 17 7 0 10 -258817
+-1 -1;
+#X obj 434 401 bng 17 250 50 0 empty empty NeuroSynth 17 7 0 10 -259329
+-1 -1;
+#X obj 434 420 bng 17 250 50 0 empty empty TriGen 17 7 0 10 -260033
+-1 -1;
+#X obj 434 439 bng 17 250 50 0 empty empty Phrase 17 7 0 10 -259649
+-1 -1;
+#X obj 434 458 bng 17 250 50 0 empty empty Voxer 17 7 0 10 -201665
+-1 -1;
+#X obj 580 327 bng 17 250 50 0 empty empty Afro 17 7 0 10 -258945 -1
+-1;
+#X obj 580 346 bng 17 250 50 0 empty empty Cyclic 17 7 0 10 -259649
+-1 -1;
+#X obj 580 365 bng 17 250 50 0 empty empty Redline 17 7 0 10 -258945
+-1 -1;
+#X obj 580 384 bng 17 250 50 0 empty empty Pattern 17 7 0 10 -259649
+-1 -1;
+#X obj 580 403 bng 17 250 50 0 empty empty DangD 17 7 0 10 -258945
+-1 -1;
+#X obj 580 422 bng 17 250 50 0 empty empty Fixed 17 7 0 10 -259649
+-1 -1;
+#X obj 580 441 bng 17 250 50 0 empty empty Jazz 17 7 0 10 -258945 -1
+-1;
+#X obj 580 460 bng 17 250 50 0 empty empty Breakbeat 17 7 0 10 -259649
+-1 -1;
+#X obj 580 479 bng 17 250 50 0 empty empty Tree 17 7 0 10 -258945 -1
+-1;
+#X obj 580 498 bng 17 250 50 0 empty empty Sky 17 7 0 10 -259649 -1
+-1;
+#X obj 580 517 bng 17 250 50 0 empty empty Sands 17 7 0 10 -258945
+-1 -1;
+#X obj 581 559 bng 17 250 50 0 empty empty Brush 17 7 0 10 -259649
+-1 -1;
+#X obj 581 578 bng 17 250 50 0 empty empty Sax 17 7 0 10 -201665 -1
+-1;
+#X obj 581 597 bng 17 250 50 0 empty empty Millenium-Drums 17 7 0 10
+-259649 -1 -1;
+#X obj 581 616 bng 17 250 50 0 empty empty Millenium-Penta 17 7 0 10
+-201665 -1 -1;
+#X obj 581 635 bng 17 250 50 0 empty empty NanoPad-Single 17 7 0 10
+-259649 -1 -1;
+#X obj 581 654 bng 17 250 50 0 empty empty NanoPad-Mono 17 7 0 10 -201665
+-1 -1;
+#X obj 116 590 bng 17 250 50 0 empty empty Drawboard1 17 7 0 10 -214402
+-1 -1;
+#X text 107 570 Seed Drawboards;
+#X obj 116 610 bng 17 250 50 0 empty empty Drawboard2 17 7 0 10 -214402
+-1 -1;
+#X obj 116 630 bng 17 250 50 0 empty empty Drawboard3 17 7 0 10 -214402
+-1 -1;
+#X obj 283 625 bng 17 250 50 0 empty empty ModDistro 17 7 0 10 -259649
+-1 -1;
+#X obj 174 371 bng 17 250 50 0 empty empty melakarta 17 7 0 10 -260097
+-1 -1;
+#X obj 437 564 bng 17 250 50 0 empty empty Looper 17 7 0 10 -259649
+-1 -1;
+#X obj 437 583 bng 17 250 50 0 empty empty Loopers 17 7 0 10 -258945
+-1 -1;
+#X obj 437 603 bng 17 250 50 0 empty empty Basic 17 7 0 10 -259649
+-1 -1;
+#X obj 437 622 bng 17 250 50 0 empty empty Basic-alt 17 7 0 10 -258945
+-1 -1;
+#X msg -427 101 \; pd open misc-melakarta.pd /home/joel/PD2/modules/
+;
+#X msg -426 183 \; pd open Seq-genmatrix.pd /home/joel/PD2/modules/
+;
+#X msg -426 217 \; pd open seq-fractal.pd /home/joel/PD2/modules/;
+#X msg -426 286 \; pd open seq-cellwork.pd /home/joel/PD2/modules/
+;
+#X msg -426 252 \; pd open Seq-chaosgenerators.pd /home/joel/PD2/modules/
+;
+#X msg -415 350 \; pd open seq-drawboard.pd /home/joel/PD2/modules/
+;
+#X msg -415 383 \; pd open seq-drawboard->2.pd /home/joel/PD2/modules/
+;
+#X msg -416 417 \; pd open seq-drawboard->3.pd /home/joel/PD2/modules/
+;
+#X obj 408 199 image ige2.gif;
+#X msg -61 -132 \; pd open seq-dynmetro.pd /home/joel/PD2/modules/
+;
+#X msg -61 -98 \; pd open seq-dangdutmetro.pd /home/joel/PD2/modules/
+;
+#X msg -62 -30 \; pd open seq-darkwaters.pd /home/joel/PD2/modules/
+;
+#X msg -62 4 \; pd open seq-valve.pd /home/joel/PD2/modules/;
+#X msg -62 -64 \; pd open seq-dangdutmetro2.pd /home/joel/PD2/modules/
+;
+#X msg -419 550 \; pd open seq-distro.pd /home/joel/PD2/modules/;
+#X msg -419 584 \; pd open seq-brush.pd /home/joel/PD2/modules/;
+#X msg -420 618 \; pd open seq-brushcyclic.pd /home/joel/PD2/modules/
+;
+#X msg -419 656 \; pd open seq-solobrush.pd /home/joel/PD2/modules/
+;
+#X msg -421 715 \; pd open seq-plug.pd /home/joel/PD2/modules/;
+#X msg -421 749 \; pd open seq-cubedistro.pd /home/joel/PD2/modules/
+;
+#X msg -422 783 \; pd open seq-pattern.pd /home/joel/PD2/modules/;
+#X msg -421 821 \; pd open seq-skydistro.pd /home/joel/PD2/modules/
+;
+#X msg 762 -143 \; pd open drummer-afro.pd /home/joel/PD2/modules/
+;
+#X msg 761 -107 \; pd open drummer-cyclic.pd /home/joel/PD2/modules/
+;
+#X msg 761 -72 \; pd open drummer-redline.pd /home/joel/PD2/modules/
+;
+#X msg 761 -40 \; pd open drummer-pattern.pd /home/joel/PD2/modules/
+;
+#X msg 761 -7 \; pd open drummer-dang.pd /home/joel/PD2/modules/;
+#X msg 762 29 \; pd open drummer-fixed.pd /home/joel/PD2/modules/;
+#X msg 765 66 \; pd open drummer-jazz.pd /home/joel/PD2/modules/;
+#X msg 765 102 \; pd open drummer-breakbeatplain.pd /home/joel/PD2/modules/
+;
+#X msg 766 137 \; pd open drummer-burmatree.pd /home/joel/PD2/modules/
+;
+#X msg 768 172 \; pd open drummer-sky.pd /home/joel/PD2/modules/;
+#X msg 769 206 \; pd open drums-sands.pd /home/joel/PD2/modules/;
+#X msg 405 -356 \; pd open seq-fugue.pd /home/joel/PD2/modules/;
+#X msg 404 -321 \; pd open synth-metalsynthbass.pd /home/joel/PD2/modules/
+;
+#X msg 403 -288 \; pd open seq-burmaburst.pd /home/joel/PD2/modules/
+;
+#X msg 402 -253 \; pd open synth-basstiger.pd /home/joel/PD2/modules/
+;
+#X msg 402 -212 \; pd open synth-neurosynth.pd /home/joel/PD2/modules/
+;
+#X msg 401 -177 \; pd open synth-trigen.pd /home/joel/PD2/modules/
+;
+#X msg 400 -144 \; pd open synth-phrase.pd /home/joel/PD2/modules/
+;
+#X msg 404 -108 \; pd open seq-voxer.pd /home/joel/PD2/modules/;
+#X msg -425 855 \; pd open seq-moddistro.pd /home/joel/PD2/modules/
+;
+#X msg 763 371 \; pd open instrument-brush.pd /home/joel/PD2/modules/
+;
+#X msg 762 407 \; pd open instrument-electrisax.pd /home/joel/PD2/modules/
+;
+#X msg 764 444 \; pd open instrument-millenium-drums.pd /home/joel/PD2/modules/
+;
+#X msg 765 494 \; pd open instrument-millenium-penta.pd /home/joel/PD2/modules/
+;
+#X msg 767 555 \; pd open instrument-nanopad2single.pd /home/joel/PD2/modules/
+;
+#X msg 771 601 \; pd open instrument-nanopad2mono.pd /home/joel/PD2/modules/
+;
+#X obj 437 642 bng 17 250 50 0 empty empty Drumsynth 17 7 0 10 -258945
+-1 -1;
+#X msg 472 720 \; pd open synth-looper.pd /home/joel/PD2/modules/;
+#X msg 471 752 \; pd open synth-loopers.pd /home/joel/PD2/modules/
+;
+#X msg 472 784 \; pd open synth-basic.pd /home/joel/PD2/modules/;
+#X msg 474 820 \; pd open synth-basic2.pd /home/joel/PD2/modules/;
+#X msg 474 858 \; pd open synth-drumsynth.pd /home/joel/PD2/modules/
+;
+#X text 559 128 HyperTonal Studio;
+#X text 561 148 (c) Joel Kivelä;
+#X text 572 112 IGE / Yangoon;
+#X obj 434 477 bng 17 250 50 0 empty empty borg 17 7 0 10 -259649 -1
+-1;
+#X obj 581 673 bng 17 250 50 0 empty empty Cube-Xsession 17 7 0 10
+-259649 -1 -1;
+#X msg 783 650 \; pd open instrument-cube.pd /home/joel/PD2/modules/
+;
+#X msg 413 -69 \; pd open seq-borg.pd /home/joel/PD2/modules/;
+#X obj 283 644 bng 17 250 50 0 empty empty Tracker 17 7 0 10 -213826
+-1 -1;
+#X msg -426 898 \; pd open seq-tracker.pd /home/joel/PD2/modules/;
+#X connect 7 0 1 0;
+#X connect 8 0 13 0;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X connect 12 0 4 0;
+#X connect 14 0 5 0;
+#X connect 15 0 11 0;
+#X connect 17 0 77 0;
+#X connect 18 0 78 0;
+#X connect 19 0 79 0;
+#X connect 21 0 91 0;
+#X connect 22 0 92 0;
+#X connect 23 0 96 0;
+#X connect 24 0 97 0;
+#X connect 29 0 85 0;
+#X connect 30 0 86 0;
+#X connect 31 0 89 0;
+#X connect 32 0 87 0;
+#X connect 33 0 80 0;
+#X connect 34 0 94 0;
+#X connect 35 0 95 0;
+#X connect 38 0 109 0;
+#X connect 39 0 110 0;
+#X connect 40 0 111 0;
+#X connect 41 0 90 0;
+#X connect 42 0 93 0;
+#X connect 43 0 88 0;
+#X connect 44 0 112 0;
+#X connect 45 0 113 0;
+#X connect 46 0 114 0;
+#X connect 47 0 115 0;
+#X connect 48 0 116 0;
+#X connect 49 0 98 0;
+#X connect 50 0 99 0;
+#X connect 51 0 100 0;
+#X connect 52 0 101 0;
+#X connect 53 0 102 0;
+#X connect 54 0 103 0;
+#X connect 55 0 104 0;
+#X connect 56 0 105 0;
+#X connect 57 0 106 0;
+#X connect 58 0 107 0;
+#X connect 59 0 108 0;
+#X connect 60 0 118 0;
+#X connect 61 0 119 0;
+#X connect 62 0 120 0;
+#X connect 63 0 121 0;
+#X connect 64 0 122 0;
+#X connect 65 0 123 0;
+#X connect 66 0 81 0;
+#X connect 68 0 82 0;
+#X connect 69 0 83 0;
+#X connect 70 0 117 0;
+#X connect 71 0 76 0;
+#X connect 72 0 125 0;
+#X connect 73 0 126 0;
+#X connect 74 0 127 0;
+#X connect 75 0 128 0;
+#X connect 124 0 129 0;
+#X connect 133 0 136 0;
+#X connect 134 0 135 0;
+#X connect 137 0 138 0;
+#X coords 0 -1 1 1 600 600 1 100 100;
+#X restore -1 -2 pd igemain;
